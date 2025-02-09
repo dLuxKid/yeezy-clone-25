@@ -182,8 +182,8 @@ export default function Home() {
             onClick={() => setShowCart(false)}
           />
           {cart.length ? (
-            <div className="h-[calc(100svh-48px)] py-[2.55%] flex flex-col justify-between w-full max-w-2xl items-center gap-8 relative z-50">
-              <div className="size-full overflow-y-auto flex flex-col gap-4">
+            <div className="h-[calc(100svh-48px)] py-[2.5%] flex flex-col justify-between w-full max-w-2xl items-center gap-8 relative z-50">
+              <div className="size-full overflow-y-auto flex flex-col gap-4 px-4">
                 {cart.map((item, i) => (
                   <div
                     key={i}
@@ -203,7 +203,7 @@ export default function Home() {
                       </p>
                       <p className="font-medium uppercase flex items-center justify-between gap-8">
                         <span>size</span>
-                        <span>${item.size}</span>
+                        <span>{item.size}</span>
                       </p>
                       <div className="font-medium uppercase flex items-center justify-between gap-8">
                         <span>QTY</span>
@@ -244,7 +244,7 @@ export default function Home() {
               </div>
             </div>
           ) : (
-            <div className="size-full flex items-center justify-center">
+            <div className="size-full flex items-center justify-center relative z-50">
               <h1>NO ITEM</h1>
             </div>
           )}
